@@ -32,9 +32,8 @@ steps:
     xcWorkspacePath: '**/iOSPipeline.xcworkspace'
     xcodeVersion: 'default'
     packageApp: true
-    signingOption: 'manual' # Optional. Options: nosign, default, manual, auto
-    signingIdentity: '$(APPLE_CERTIFICATE_SIGNING_IDENTITY)'
-    provisioningProfileUuid: '$(APPLE_PROV_PROFILE_UUID)'
+    signingOption: 'Do not code sign'
+    
    
 - task: CopyFiles@2
   inputs:
