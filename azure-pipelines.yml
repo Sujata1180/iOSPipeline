@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'macos-10.15'
+  vmImage: 'macos-11'
 
 variables:
   - group: ios-pipeline
@@ -40,6 +40,6 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    pathtoPublish: '$(build.artifactStagingDirectory)/output/$(sdk)/$(configuration)' 
+    pathtoPublish: '$(build.artifactStagingDirectory)'
     artifactName: 'drop' 
     publishLocation: 'Azure Pipelines'
