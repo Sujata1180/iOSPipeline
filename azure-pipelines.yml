@@ -42,4 +42,4 @@ steps:
   inputs:
     pathtoPublish: '$(build.artifactStagingDirectory)/output/$(sdk)/$(configuration)' 
     artifactName: 'drop' 
-    publishLocation: 'Container'
+    publishLocation: 'Azure Pipelines'
