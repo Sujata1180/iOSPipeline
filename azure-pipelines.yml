@@ -31,7 +31,7 @@ steps:
     configuration: 'Release'
     xcWorkspacePath: '**/iOSPipeline.xcworkspace'
     xcodeVersion: 'default'
-    signingOption: 'Do not code sign'
+    #signingOption: 'Do not code sign'
     
    
 - task: CopyFiles@2
