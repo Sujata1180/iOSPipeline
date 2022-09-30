@@ -27,19 +27,21 @@ steps:
   inputs:
     actions: 'build'
     scheme: 'iOSPipeline'
-    sdk: '$(sdk)'
-    configuration: '$(configuration)'
+    sdk: 'iphoneos'
+    configuration: 'Release'
     xcWorkspacePath: '**/iOSPipeline.xcworkspace'
     xcodeVersion: 'default'
+    packageApp: true
    
 - task: CopyFiles@2
   inputs:
     contents: '**/*.ipa'
+    SourceFolder: '$(system.defaultworkingdirectory)'
     targetFolder: '$(build.artifactStagingDirectory)'
     overWrite: true
 
 - task: PublishBuildArtifacts@1
   inputs:
-    pathtoPublish: '$(build.artifactStagingDirectory)'
+    pathtoPublish: '$(build.artifactStagingDirectory)/output/iphoneos/Release'
     artifactName: 'drop' 
     publishLocation: 'Azure Pipelines'
