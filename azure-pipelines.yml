@@ -31,7 +31,6 @@ steps:
     configuration: 'Release'
     xcWorkspacePath: '**/iOSPipeline.xcworkspace'
     xcodeVersion: 'default'
-    packageApp: true
     signingOption: 'Do not code sign'
     
    
